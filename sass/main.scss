@@ -1,0 +1,99 @@
+// *** VARIABLES ***
+$font: 'Roboto', sans-serif;
+$transparentBackground: #333333dd;
+$backgroundColor: #890A10;
+$color: #8AECA4;
+
+// *** BASE START***
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+// *** SITE BLOCKS ***
+// *** MENU ***
+.menu-container{
+    padding: 20px;
+    .logo{
+        background-color: #fff;
+        width: 70px;
+        height: 70px;
+        padding: 5px;
+        margin-right: 20px;
+        border-radius: 10px;
+        float: left;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .menu-wrapper{
+        float: left;
+        .menu-item{
+            input{
+                width: 120px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 22px;
+                &:first-child{
+                    margin-bottom: 18px;
+                }
+                &::selection{
+                    background-color: $transparentBackground;
+                }
+            }
+            span{
+                user-select: none;
+            }
+        }
+    }
+    z-index: 9;
+}
+
+// *** MAIN ***
+.main-container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    .main-wrapper{
+        width: 75%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        i{
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        input{
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            font-size: 60px;
+            font-weight: 700;
+            text-align: center;
+            outline: none;
+            &::selection{
+                background-color: $transparentBackground;
+            }
+        }
+    }
+    z-index: -1;
+}
+
+// *** FOOTER ***
+.footer-container{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    padding: 20px;
+    z-index: 9;
+}

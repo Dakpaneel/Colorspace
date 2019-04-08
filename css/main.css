@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-container {
+  padding: 20px;
+  z-index: 9;
+}
+
+.menu-container .logo {
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  margin-right: 20px;
+  border-radius: 10px;
+  float: left;
+}
+
+.menu-container .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-container .menu-wrapper {
+  float: left;
+}
+
+.menu-container .menu-wrapper .menu-item input {
+  width: 120px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 22px;
+}
+
+.menu-container .menu-wrapper .menu-item input:first-child {
+  margin-bottom: 18px;
+}
+
+.menu-container .menu-wrapper .menu-item input::-moz-selection {
+  background-color: #333333dd;
+}
+
+.menu-container .menu-wrapper .menu-item input::selection {
+  background-color: #333333dd;
+}
+
+.menu-container .menu-wrapper .menu-item span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.main-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.main-container .main-wrapper {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main-container .main-wrapper i {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.main-container .main-wrapper input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+}
+
+.main-container .main-wrapper input::-moz-selection {
+  background-color: #333333dd;
+}
+
+.main-container .main-wrapper input::selection {
+  background-color: #333333dd;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
+  padding: 20px;
+  z-index: 9;
+}
+/*# sourceMappingURL=main.css.map */
