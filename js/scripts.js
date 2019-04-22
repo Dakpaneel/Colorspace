@@ -14,6 +14,26 @@ function textGenerator(){
 };
 $("#magic").val(textGenerator());
 
+
+// Get get
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+var background = getUrlParameter("background");
+var font = getUrlParameter("font");
+
 // The heart..
 function colorGenerator(){
     var bgColor = "";
@@ -23,11 +43,15 @@ function colorGenerator(){
         bgColor += data.charAt(Math.floor(Math.random() * data.length));
         color += data.charAt(Math.floor(Math.random() * data.length));
     };
-    console.log(bgColor);
+    if(background !== undefined){
+        bgColor = background;
+    }
+    if(font !== undefined){
+        color = font;
+    }
     $(".main-container").css("background-color", "#"+bgColor);
     $("#bgColor").val("#"+bgColor);
 
-    console.log(color);
     $(".main-container").find('*').css("color", "#"+color);
     $("#color").val("#"+color);
 
@@ -59,6 +83,7 @@ $(".colorInput").each(function(){
 document.body.onkeyup = function(e){
     if(!$("input").is(":focus")){
         if(e.keyCode == 32) colorGenerator();
+        if(background !== undefined && font !== undefined) window.location("https://bradleyoosterveen.nl/color/");
     };
 };
 
